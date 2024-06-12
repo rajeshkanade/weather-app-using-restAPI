@@ -70,7 +70,8 @@ function getWeatherDetails(weather) {
     "Broken clouds": "./images/icon-3.svg",
     "Thunderstorm with rain": "./images/icon-11.svg",
     "Thunderstorm with heavy rain": "./images/icon-11.svg",
-    Thunderstorm: "./images/icon-12.svg",
+    "Thunderstorm": "./images/icon-12.svg",
+    "Moderate rain" : "./images/icon-13.svg",
   };
   return `<img src='${weatherImages[weather]}' alt=''>`;
 }
@@ -78,7 +79,8 @@ function getWeatherDetails(weather) {
 
 const setWeather = async (city) =>{
     let api = ""
-    if(city == "bhenda" || city == "kukana" || city == "newasa")
+    myCity = String(city)
+    if(myCity.toLowerCase() == "bhenda" || myCity.toLowerCase() == "kukana" || myCity.toLowerCase() == "newasa")
             {
              api = `https://api.weatherbit.io/v2.0/forecast/daily?city=ahmednagar&lang=en&key=62a7ac5ecfbe4f11983cd067cc8d74ee`;
             }
@@ -93,7 +95,7 @@ const setWeather = async (city) =>{
     let objData = data;
     console.log(objData);
 
-    city == "bhenda" || city == "kukana" || city == "newasa" ? city_name.textContent = city : city_name.textContent = objData.city_name;
+    myCity.toLowerCase() == "bhenda" || myCity.toLowerCase() == "kukana" || myCity.toLowerCase() == "newasa" ? city_name.textContent = city : city_name.textContent = objData.city_name;
     
     country_name.textContent = objData.country_code;
 
@@ -165,8 +167,9 @@ const setWeather = async (city) =>{
     let weather5 = getAllWeather[4];
     let weather6 = getAllWeather[5];
     let weather7 = getAllWeather[6];
-    console.log(weather6)
-    console.log(weather7)
+    // console.log(weather6)
+    // console.log(weather7)
+    console.log(weather1)
 
     firstWeather.innerHTML = getWeatherDetails(weather1) 
     secondWeather.innerHTML = getWeatherDetails(weather2) 
