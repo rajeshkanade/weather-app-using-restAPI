@@ -4,7 +4,8 @@
   "description": "This is Express JS Weather Web",
   "main": "node.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "src/app.js"
   },
   "author": "Rajesh kanade",
   "license": "ISC",
