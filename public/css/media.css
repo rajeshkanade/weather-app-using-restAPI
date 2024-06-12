@@ -25,6 +25,10 @@
 }
 
 @media screen and (max-width: 500px) {
+
+  .home_main{
+    height: 95vh;
+  }
     .weather_main {
         & .form {
           & form {
@@ -99,4 +103,20 @@
           }
         }
       }
+}
+
+
+@media screen and (max-width:400px) {
+  .home_main{
+    height: 100vh;
+  }
+  footer{
+    h4{
+      line-height: 25px;
+      padding: 10px 0;
+    }
+    span{
+      display: block;
+    }
+  }
 }
