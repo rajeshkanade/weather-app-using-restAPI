@@ -1,0 +1,15 @@
+{
+  "name": "using-express-js",
+  "version": "1.0.0",
+  "description": "This is Express JS Weather Web",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rajesh kanade",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "hbs": "^4.2.0"
+  }
+}

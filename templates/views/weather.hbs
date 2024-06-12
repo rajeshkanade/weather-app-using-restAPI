@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather weather</title>
+    
+    {{>css_link}}
+  
+
+
+   
+</head>
+
+<body>
+    <!-- Navbar  -->
+    {{>header}}
+    <!-- Main Section  -->
+    <div class="container-fluid weather_main">
+        <div class="container">
+            <div class="form">
+                <form class="form-control" role="search">
+                    <input id="cityName" class="form-control me-2" type="search" placeholder="Find Your Location..."
+                        aria-label="Search">
+                    <button class="btn_css" id="FindWeather" type="submit">Find</button>
+                </form>
+            </div>
+            <div class="weather_details">
+                <div class="weather_card weather_one">
+
+                    <div class="weather_heading">
+                        <p id="day">Sunday</pi>
+                        <p id="dateMonth">9 June</p>
+                    </div>
+                    <div class="weather_body">
+                        <h2><span id="city_name">Pune</span>,<span id="country">IN</span></h2>
+                        <div class="degree">
+                            <h1 id="tempreture">27<sup>o</sup>C</h1>
+                            <span id="firstWeather"><img src="images/icon-1.svg" alt=""></span>
+                        </div>
+                        <div class="extra">
+                            <span>
+                                <img src="./images/icon-umberella@2x.png" alt=""><span id="humadity">20%</span>
+                            </span>
+                            <span>
+                                <img src="./images/icon-wind@2x.png" alt=""><span id="windSpeed"></span>
+                            </span>
+                            <span>
+                                <img src="./images/icon-compass@2x.png" alt=""><span id="windDir"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather_card weather_two">
+                    <div class="weather_heading">
+                        <p id="SecondDay">Mond</p>
+                    </div>
+                    <div class="weather_body">
+                        <div class="degree">
+                            <span id="secondWeather"><img src="images/icon-3.svg" alt=""></span>
+                            <h1 id="secondTemp">27<sup>o</sup>C</h1>
+                            <h3 id="minsecondTemp">18<sup>o</sup></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather_card weather_two">
+                    <div class="weather_heading">
+                        <p id="thirdDay">Tue</p>
+                    </div>
+                    <div class="weather_body">
+                        <div class="degree">
+                            <span id="thirdWeather"><img src="images/icon-7.svg" alt=""></span>
+                            <h1 id="thirdTemp">29<sup>o</sup>C</h1>
+                            <h3 id="minthirdTemp">16<sup>o</sup></h3>
+                        </div>
+                    </div>
+                </div><div class="weather_card weather_two">
+                    <div class="weather_heading">
+                        <p id="fourthDay">Wed</p>
+                    </div>
+                    <div class="weather_body">
+                        <div class="degree">
+                            <span id="fourthWeather"><img src="images/icon-5.svg" alt=""></span>
+                            <h1 id="fourthTemp">27<sup>o</sup>C</h1>
+                            <h3 id="minfourthTemp">18<sup>o</sup></h3>
+                        </div>
+                    </div>
+                </div><div class="weather_card weather_two">
+                    <div class="weather_heading">
+                        <p id="fifthDay">Thus</p>
+                    </div>
+                    <div class="weather_body">
+                        <div class="degree">
+                            <span id="fifthWeather"><img src="images/icon-12.svg" alt=""></span>
+                            <h1 id="fifthTemp">27<sup>o</sup>C</h1>
+                            <h3 id="minfifthTemp">18<sup>o</sup></h3>
+                        </div>
+                    </div>
+                </div><div class="weather_card weather_two">
+                    <div class="weather_heading">
+                        <p id="sixthDay">Fri</p>
+                    </div>
+                    <div class="weather_body">
+                        <div class="degree">
+                            <span id="sixthWeather"><img src="images/icon-13.svg" alt=""></span>
+                            <h1 id="sixthTemp">27<sup>o</sup>C</h1>
+                            <h3 id="minsixthTemp">18<sup>o</sup></h3>
+                        </div>
+                    </div>
+                </div><div class="weather_card weather_two">
+                    <div class="weather_heading">
+                        <p id="seventhDay">Sat</p>
+                    </div>
+                    <div class="weather_body">
+                        <div class="degree">
+                            <span id="seventhWeather"><img src="images/icon-14.svg" alt=""></span>
+                            <h1 id="seventhTemp">27<sup>o</sup>C</h1>
+                            <h3 id="minseventhTemp">18<sup>o</sup></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   {{>footer}}
+   {{>js_link}}
+</body>
+
+</html>

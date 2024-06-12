@@ -1,0 +1,102 @@
+@media screen and (max-width: 762px) {
+  .home_main {
+    align-items: start;
+  }
+  .content1 {
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .weather_main {
+    height: auto;
+    padding-bottom: 3rem;
+    & .weather_details {
+      display: block;
+      & .weather_one {
+        width: 100%;
+      }
+      & .weather_two {
+        float: left;
+        width: 16.6%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+    .weather_main {
+        & .form {
+          & form {
+            & input {
+             
+              color: white;
+             
+              font-size: 1rem;
+              
+          margin-right: auto;
+            }
+            & .btn_css{
+                padding: 1rem 4rem;
+            }
+          }
+        }
+        
+        
+      }
+  .weather_main {
+    height: auto;
+    padding-bottom: 3rem;
+     
+    & .weather_details {
+      display: block;
+      .weather_body {
+        & .degree {
+          margin-bottom: 2rem;
+          justify-content: space-between;
+          & h1 {
+            font-size: 5.5rem;
+          }
+          & img{
+            width: 8rem;
+          }
+        }
+        & .extra{
+          font-size: 1.3rem;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span img{
+            width: 1.6rem;
+          }
+        }
+      }
+      & .weather_one {
+        width: 100%;
+        padding-bottom: 2rem;
+      }
+      & .weather_two {
+        float: none;
+        display: inline-block;
+        /* margin-top: 1rem; */
+        width: 33%;
+        .weather_body {
+            & .degree {
+              justify-content: space-between;
+              & h1 {
+                font-size: 1.6rem;
+              }
+            }
+          }
+      }
+    }
+    }
+      .weather_main {
+        & .weather_details {
+          & .weather_card {
+            height: auto;
+          }
+        }
+      }
+}

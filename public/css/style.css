@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+:root {
+  --background-color: #1e202b;
+  --color: #009ad8;
+  --light-black: #262936;
+}
+
+.navbar_main {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: var(--background-color);
+  color: white;
+
+  .navbar {
+    background-color: #1e202b;
+    a {
+      color: var(--color);
+      font-size: 2.3rem;
+    }
+
+    img {
+      width: 3.5rem;
+      margin-top: -0.5rem;
+    }
+    .nav-link {
+      color: #fff;
+      font-size: 1.4rem;
+      margin-left: 2.5rem;
+      border: 2px solid transparent;
+      transition: border-color 0.3s;
+      padding: 0.5rem 2.3rem;
+      border-radius: 40px;
+    }
+
+    .nav-link:hover {
+      border-color: var(--color);
+    }
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23009ad8' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Home Section CSS  */
+
+.home_main {
+  width: 100%;
+  height: 90vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .row {
+    width: 100%;
+    height: 60vh;
+
+    .col-md-6{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        
+        img{
+          height: 60vh;
+        }
+    }
+    .content{
+      padding-left: 3rem;
+    }
+    
+    h4{
+        color: #706959;
+    }
+    h1 {
+      margin: 2rem 0;
+      font-size: 3.5rem;
+    }
+
+    .home_btn {
+      padding: .8rem 1rem;
+      border: none;
+      outline: none;
+      background-color: #efefef;
+      text-transform: uppercase;
+      -webkit-box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.75);
+      border-radius: 20px;
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+      }
+      margin-bottom: 4rem;
+    }
+    .home_btn:hover {
+      -webkit-box-shadow: 0px 7px 12px 0px rgba(0, 154, 216, 1);
+      -moz-box-shadow: 0px 7px 12px 0px rgba(0, 154, 216, 1);
+      box-shadow: 0px 7px 12px 0px rgba(0, 154, 216, 1);
+    }
+  }
+}
+
+.weather_main {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/background.jpg");
+  width: 100%;
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  position: relative;
+  display: flex;
+}
+
+.weather_main {
+  .form {
+    margin-top: 7rem;
+
+    form {
+      background-color: transparent;
+      border: none;
+      width: 80%;
+      margin: auto;
+      position: relative;
+      input {
+        opacity: 1;
+        background-color: var(--background-color);
+        padding: 2rem 2rem 2rem 2.2rem;
+        color: white;
+        border: none;
+        outline: none;
+        font-size: 1.4rem;
+        border-radius: 40px;
+        width: 100%;
+        display: block;
+        margin: auto;
+      }
+      ::placeholder {
+        color: #706959;
+      }
+
+      .btn_css {
+        padding: 1.2rem 4.5rem;
+        position: absolute;
+        right: 16px;
+        border-radius: 20px;
+        top: 10px;
+        background-color: var(--color);
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .weather_details {
+    width: 90%;
+    margin: auto;
+    margin-top: 5rem;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--background-color);
+    display: flex;
+    overflow: hidden;
+    height: auto;
+    .weather_card {
+      height: 32rem;
+    }
+    .weather_one {
+      width: 40%;
+    }
+
+    .weather_heading {
+      background-color: var(--background-color);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.5rem;
+      padding: 5px 15px;
+    }
+
+    .weather_body {
+      background-color: var(--light-black);
+      padding: 4rem 15px;
+      height: 100%;
+      h2 {
+        color: #a4b7c8;
+      }
+      .degree {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 2rem;
+        h1 {
+          font-size: 9rem;
+        }
+        img {
+          margin-left: 3rem;
+          width: 10rem;
+        }
+      }
+      .extra {
+        font-size: 1.5rem;
+        color: #a4b7c8;
+        span img {
+          width: 2.6rem;
+          margin: 0 0.6rem 0 1rem;
+        }
+      }
+    }
+    .weather_two {
+      width: 10%;
+
+      .weather_heading {
+        background-color: var(--light-black);
+        font-size: 1.3rem;
+        text-align: center;
+        display: block;
+      }
+      .weather_body {
+        background-color: var(--background-color);
+        display: flex;
+        height: 87%;
+        align-items: center;
+        flex-direction: column;
+      }
+      .degree {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+        h1 {
+          font-size: 2rem;
+        }
+        img {
+          margin: 2rem auto;
+          width: 5rem;
+        }
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .weather_two:nth-child(odd) {
+      .weather_heading {
+        background-color: var(--background-color);
+      }
+      .weather_body {
+        background-color: #262936;
+      }
+    }
+    .weather_two:nth-child(even) {
+    }
+  }
+}
+
+footer {
+  background-color: var(--background-color);
+  width: 100%;
+  height: 6rem;
+  text-align: center;
+  margin-top: auto;
+  h4 {
+    line-height: 6rem;
+    color: white;
+  }
+}
