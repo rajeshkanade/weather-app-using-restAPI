@@ -117,6 +117,11 @@ html {
   }
 }
 
+/* container fluid css for empty input message  */
+
+
+/* Weather css  */
+
 .weather_main {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../images/background.jpg");
@@ -128,11 +133,57 @@ html {
 
   position: relative;
   display: flex;
+
+  .alert{
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    /* bottom: 40px; */
+    padding: 1rem ;
+    padding-right: 5rem;
+
+    i{
+      color: red;
+      font-size: 1.6rem;
+      padding: 0 .5rem;
+    }
+
+    strong{
+      font-size: 1.4rem;
+    }
+    .btn-close{
+      font-size: 1.4rem;
+      padding: auto 5rem;
+    }
+    .progress-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 5px;
+      background-color: red;
+      width: 100%;
+      animation: progress 3s alternate-reverse;
+  }
+  
+  
+  
+  }
 }
+@keyframes progress {
+  from { width: 100%; }
+  to { width: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 
 .weather_main {
   .form {
     margin-top: 7rem;
+    
 
     form {
       background-color: transparent;

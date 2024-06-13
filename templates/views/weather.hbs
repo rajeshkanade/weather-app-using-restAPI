@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather weather</title>
-    
+
     {{>css_link}}
-  
 
 
-   
 </head>
 
 <body>
@@ -18,8 +16,23 @@
     {{>header}}
     <!-- Main Section  -->
     <div class="container-fluid weather_main">
+       
+        <div class="alert alert-warning alert-dismissible fade show" id="noInput" role="alert">
+            <i class="fa-solid fa-triangle-exclamation fa-flip text-danger " style="color: red;"></i>
+            <strong id="inputMessage">Holy guacamole!</strong>
+            <button type="button" class="btn-close" id="closeAlert" aria-label="Close"></button>
+            <div class="" id="progress"></div>
+        </div>
+        {{!-- <div id="noInput" class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong id="inputMessage">Holy guacamole!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div> --}}
+        {{!-- <div class="alert alert-danger" id="noInput" role="alert">
+            A simple danger alert—check it out!
+        </div> --}}
         <div class="container">
             <div class="form">
+
                 <form class="form-control" role="search">
                     <input id="cityName" class="form-control me-2" type="search" placeholder="Find Your Location..."
                         aria-label="Search">
@@ -75,7 +88,8 @@
                             <h3 id="minthirdTemp">16<sup>o</sup></h3>
                         </div>
                     </div>
-                </div><div class="weather_card weather_two">
+                </div>
+                <div class="weather_card weather_two">
                     <div class="weather_heading">
                         <p id="fourthDay">Wed</p>
                     </div>
@@ -86,7 +100,8 @@
                             <h3 id="minfourthTemp">18<sup>o</sup></h3>
                         </div>
                     </div>
-                </div><div class="weather_card weather_two">
+                </div>
+                <div class="weather_card weather_two">
                     <div class="weather_heading">
                         <p id="fifthDay">Thus</p>
                     </div>
@@ -97,7 +112,8 @@
                             <h3 id="minfifthTemp">18<sup>o</sup></h3>
                         </div>
                     </div>
-                </div><div class="weather_card weather_two">
+                </div>
+                <div class="weather_card weather_two">
                     <div class="weather_heading">
                         <p id="sixthDay">Fri</p>
                     </div>
@@ -108,7 +124,8 @@
                             <h3 id="minsixthTemp">18<sup>o</sup></h3>
                         </div>
                     </div>
-                </div><div class="weather_card weather_two">
+                </div>
+                <div class="weather_card weather_two">
                     <div class="weather_heading">
                         <p id="seventhDay">Sat</p>
                     </div>
@@ -123,8 +140,8 @@
             </div>
         </div>
     </div>
-   {{>footer}}
-   {{>js_link}}
+    {{>footer}}
+    {{>js_link}}
 </body>
 
 </html>

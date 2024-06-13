@@ -31,6 +31,15 @@ let fifthWeather = document.getElementById("fifthWeather");
 let sixthWeather = document.getElementById("sixthWeather");
 let seventhWeather = document.getElementById("seventhWeather");
 
+let noInput = document.getElementById("noInput");
+let inputMessage = document.getElementById("inputMessage")
+let progress = document.getElementById("progress");
+document.getElementById("closeAlert").addEventListener('click',()=>{
+  noInput.style.visibility = "hidden";
+  progress.classList.remove("progress-bar")
+})
+
+
 function getWindDirection(degree) {
   if (degree > 337.5) return "N";
   if (degree > 292.5) return "NW";
@@ -77,7 +86,11 @@ function getWeatherDetails(weather) {
 }
 
 
+
 const setWeather = async (city) =>{
+
+ 
+
     let api = ""
     myCity = String(city)
     if(myCity.toLowerCase() == "bhenda" || myCity.toLowerCase() == "kukana" || myCity.toLowerCase() == "newasa")
@@ -181,7 +194,14 @@ const setWeather = async (city) =>{
 
   } catch (e) {
     console.log("result not found...!", e);
+    noInput.style.visibility = "visible";
+    let message = "Please Enter Valid  City Name ";
+    inputMessage.innerHTML =  message ;
+    progress.classList.add("progress-bar")
+    setTimeout(hideMessage , 3000);
+
   }
+
 }
 
 
@@ -196,12 +216,30 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 
+noInput.style.visibility = "hidden";
+
+const hideMessage = () => {
+  progress.classList.remove("progress-bar")
+  noInput.style.visibility = "hidden";
+}
+
+
+
 FindWeather.addEventListener("click", async (event)=>{
     event.preventDefault();
     
      let cityName = document.getElementById("cityName").value;
-    await setWeather(cityName)
-     cityName = document.getElementById("cityName");
+     if(cityName == ""){
+      noInput.style.visibility = "visible";
+      let message = "Please Enter the City Name ";
+      inputMessage.innerHTML =  message ;
+      progress.classList.add("progress-bar")
+      setTimeout(hideMessage , 3000);
+     }
+     else{
+       await setWeather(cityName)
+       }
+      cityName = document.getElementById("cityName");
 
     cityName.value = "";
 })
