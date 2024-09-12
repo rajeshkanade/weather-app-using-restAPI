@@ -1,3 +1,13 @@
+
+
+// api.openweathermap.org/data/2.5/forecast/daily?lat={lat}&lon={lon}&appid=
+
+
+
+// api.openweathermap.org/data/2.5/forecast/daily?lat=18.5204&lon=18.5204&appid=1b68f58002f0e4048af301a0d7240961
+
+
+
 let FindWeather = document.getElementById("FindWeather");
 
 let city_name = document.getElementById("city_name");
@@ -92,13 +102,13 @@ const setWeather = async (city) =>{
  
 
     let api = ""
-    myCity = String(city)
+    myCity = String(city).trim();
     if(myCity.toLowerCase() == "bhenda" || myCity.toLowerCase() == "kukana" || myCity.toLowerCase() == "newasa")
             {
-             api = `https://api.weatherbit.io/v2.0/forecast/daily?city=ahmednagar&lang=en&key=62a7ac5ecfbe4f11983cd067cc8d74ee`;
+             api = `https://api.weatherbit.io/v2.0/forecast/daily?city=ahmednagar&lang=en&key=f874a7e1533d44e695fc8662ee317468`;
             }
         else{
-             api = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&lang=en&key=62a7ac5ecfbe4f11983cd067cc8d74ee`;
+             api = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&lang=en&key=f874a7e1533d44e695fc8662ee317468`;
         }
 
   try {
