@@ -102,13 +102,14 @@ const setWeather = async (city) =>{
  
 
     let api = ""
+    let key = 'f444720c60f84cc18e7f4e7979a9ffda'
     myCity = String(city).trim();
     if(myCity.toLowerCase() == "bhenda" || myCity.toLowerCase() == "kukana" || myCity.toLowerCase() == "newasa")
             {
-             api = `https://api.weatherbit.io/v2.0/forecast/daily?city=ahmednagar&lang=en&key=f874a7e1533d44e695fc8662ee317468`;
+             api = `https://api.weatherbit.io/v2.0/forecast/daily?city=ahmednagar&lang=en&key=${key}`;
             }
         else{
-             api = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&lang=en&key=f874a7e1533d44e695fc8662ee317468`;
+             api = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&lang=en&key=${key}`;
         }
 
   try {
